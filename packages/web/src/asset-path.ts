@@ -1,4 +1,4 @@
-const currentScript = window.document.currentScript as HTMLScriptElement | null
+const currentScript = typeof window === "undefined" ? null : window.document.currentScript as HTMLScriptElement | null
 let basePath = ""
 if (currentScript) {
   basePath = currentScript.src
